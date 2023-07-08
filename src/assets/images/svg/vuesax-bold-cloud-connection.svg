@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.237" height="14.237" viewBox="0 0 14.237 14.237">
+  <g id="vuesax_bold_cloud-connection" data-name="vuesax/bold/cloud-connection" transform="translate(-488 -254)">
+    <g id="cloud-connection" transform="translate(488 254)">
+      <path id="Vector" d="M0,0H14.237V14.237H0Z" transform="translate(14.237 14.237) rotate(180)" fill="none" opacity="0"/>
+      <path id="Vector-2" data-name="Vector" d="M9.424,7.582a2.754,2.754,0,0,1-1.88.724H1.813a1.928,1.928,0,0,1,0-3.85h.024a3.2,3.2,0,1,1,6.14-1.608A2.758,2.758,0,0,1,9.424,7.582Z" transform="translate(1.966 1.186)" fill="#fff"/>
+      <path id="Vector-3" data-name="Vector" d="M8.008,2.966a.448.448,0,0,1-.445.445H5.19A.2.2,0,0,1,5.107,3.4,1.185,1.185,0,0,1,2.9,3.4a.2.2,0,0,1-.083.012H.445a.445.445,0,0,1,0-.89H2.818a.2.2,0,0,1,.083.012,1.166,1.166,0,0,1,.67-.67.2.2,0,0,1-.012-.083V0h.89V1.78a.2.2,0,0,1-.012.083,1.166,1.166,0,0,1,.67.67.2.2,0,0,1,.083-.012H7.563A.448.448,0,0,1,8.008,2.966Z" transform="translate(3.114 9.491)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

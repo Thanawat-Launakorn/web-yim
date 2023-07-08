@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.837" height="32.837" viewBox="0 0 32.837 32.837">
+  <g id="vuesax_bold_clipboard-tick" data-name="vuesax/bold/clipboard-tick" transform="translate(-172 -252)">
+    <g id="clipboard-tick" transform="translate(172 252)">
+      <path id="Vector" d="M9.016,0H2.586A2.581,2.581,0,0,0,0,2.572V3.858A2.569,2.569,0,0,0,2.572,6.431H9.016a2.569,2.569,0,0,0,2.572-2.572V2.572A2.561,2.561,0,0,0,9.016,0Z" transform="translate(10.617 2.736)" fill="#3c97ff" opacity="0.45"/>
+      <path id="Vector-2" data-name="Vector" d="M19.086,1.009a3.965,3.965,0,0,1-3.954,3.954H8.7A3.965,3.965,0,0,1,4.748,1.009,1.022,1.022,0,0,0,3.243.12,6.118,6.118,0,0,0,0,5.524V18.4a6.131,6.131,0,0,0,6.116,6.116h11.6A6.131,6.131,0,0,0,23.834,18.4V5.524A6.118,6.118,0,0,0,20.591.12,1.022,1.022,0,0,0,19.086,1.009Zm-2.6,10.822L11.014,17.3a1.024,1.024,0,0,1-1.45,0L7.511,15.252a1.026,1.026,0,0,1,1.45-1.45l1.327,1.327,4.748-4.748a1.026,1.026,0,0,1,1.45,1.45Z" transform="translate(4.501 5.586)" fill="#3c97ff"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H32.837V32.837H0Z" transform="translate(32.837 32.837) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

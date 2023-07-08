@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body, html, * {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+ul li {
+    list-style-type: none;
+}
+/* ::-webkit-scrollbar {
+    display: none;
+  } */
+
+.line {
+    position: relative;
+}
+  
+.line::after {
+    position: absolute;
+    content: '';
+    background-color: #3C97FF;
+    border-radius: 100%;
+    left: -5px;
+    bottom: -1px;
+    width: 10px;
+    height: 10px; 
+}
+
+.side {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.header {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(40px) !important;
+    -webkit-backdrop-filter: blur(40px) !important;
+}
+
+.parent {
+	flex: 1;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+
+	overflow: visible;
+}
+
+.parent-overflow {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden
+}
+.wrapper:after,
+.wrapper:before {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+.wrapper:before {
+    left: 0;
+    background-image: linear-gradient(to left, rgba(255,255,255,0), #081224);
+}
+
+.wrapper:after {
+    right: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), #081224);
+
+}
+
+.slide {
+	animation: animate 5s  linear infinite;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.wrapper:hover .slide {
+	animation-play-state: paused;
+}
+
+.side-bar-open {
+    animation: slide-open .3s forwards;
+}
+
+@keyframes slide-open {
+    from {
+        transform: translateY(-5%);
+        opacity: 0;
+        display: none;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+        display: block;
+    }
+}
+.side-bar-close {
+    animation: slide-close .3s forwards;
+    display: none
+
+}
+@keyframes slide-close {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10%);
+        height: 0;
+    }
+}
+@keyframes animate {
+	0% {
+        transform: translateX(0);
+	}
+	100% {
+        transform: translateX(-100%);
+	}
+}

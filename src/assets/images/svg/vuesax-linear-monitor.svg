@@ -1,0 +1,9 @@
+<svg id="vuesax_linear_monitor" data-name="vuesax/linear/monitor" xmlns="http://www.w3.org/2000/svg" width="32.814" height="32.814" viewBox="0 0 32.814 32.814">
+  <g id="monitor">
+    <path id="Vector" d="M6.071,0h15.19c4.867,0,6.084,1.217,6.084,6.071v8.655c0,4.867-1.217,6.071-6.071,6.071H6.071C1.217,20.809,0,19.593,0,14.739V6.071C0,1.217,1.217,0,6.071,0Z" transform="translate(2.734 2.734)" fill="none" stroke="#3cfff8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Vector-2" data-name="Vector" d="M0,0V6.535" transform="translate(16.407 23.544)" fill="none" stroke="#3cfff8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Vector-3" data-name="Vector" d="M0,0H27.345" transform="translate(2.734 17.774)" fill="none" stroke="#3cfff8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Vector-4" data-name="Vector" d="M0,0H12.305" transform="translate(10.254 30.079)" fill="none" stroke="#3cfff8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Vector-5" data-name="Vector" d="M0,0H32.814V32.814H0Z" fill="none" opacity="0"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.782" height="60.782" viewBox="0 0 60.782 60.782">
+  <defs>
+    <linearGradient id="linear-gradient" y1="-0.428" x2="0.5" y2="1.776" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#473af7"/>
+      <stop offset="1" stop-color="#269ff3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="vuesax_bold_home-hashtag" data-name="vuesax/bold/home-hashtag" transform="translate(-556 -188)">
+    <g id="home-hashtag" transform="translate(556 188)">
+      <path id="Vector" d="M0,7.066H1.773A5.307,5.307,0,0,0,7.066,1.773V0H0Z" transform="translate(32.164 35.684)" fill="url(#linear-gradient)"/>
+      <path id="Vector-2" data-name="Vector" d="M0,1.773A5.307,5.307,0,0,0,5.293,7.066H7.066V0H0Z" transform="translate(21.552 35.684)" fill="url(#linear-gradient)"/>
+      <path id="Vector-3" data-name="Vector" d="M0,5.293V7.066H7.066V0H5.293A5.307,5.307,0,0,0,0,5.293Z" transform="translate(21.552 25.098)" fill="url(#linear-gradient)"/>
+      <path id="Vector-4" data-name="Vector" d="M45.663,12.2,31.1,2a12.249,12.249,0,0,0-13.879.329l-12.688,9.9A12.953,12.953,0,0,0,0,21.445V38.92A11.722,11.722,0,0,0,11.675,50.646H38.951a11.7,11.7,0,0,0,11.675-11.7V21.775A12.816,12.816,0,0,0,45.663,12.2ZM37.685,32.386a8.863,8.863,0,0,1-8.839,8.839H21.78a8.847,8.847,0,0,1-8.839-8.839V25.32a8.863,8.863,0,0,1,8.839-8.839h7.066a8.847,8.847,0,0,1,8.839,8.839v7.066Z" transform="translate(5.065 5.071)" fill="url(#linear-gradient)"/>
+      <path id="Vector-5" data-name="Vector" d="M1.773,0H0V7.066H7.066V5.293A5.307,5.307,0,0,0,1.773,0Z" transform="translate(32.164 25.098)" fill="url(#linear-gradient)"/>
+      <path id="Vector-6" data-name="Vector" d="M0,0H60.782V60.782H0Z" transform="translate(60.782 60.782) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

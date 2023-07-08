@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.872" height="18.872" viewBox="0 0 18.872 18.872">
+  <g id="vuesax_bold_moon" data-name="vuesax/bold/moon" transform="translate(0)">
+    <g id="moon" transform="translate(0 0)">
+      <path id="Vector" d="M15.117,10.953c-.126-.212-.48-.543-1.36-.385a6.653,6.653,0,0,1-1.478.1A6.613,6.613,0,0,1,7.631,8.453,6.344,6.344,0,0,1,6.5,1.643C6.844.849,6.6.432,6.428.259S5.822-.173,4.989.173A8.113,8.113,0,0,0,.019,8.2,8.237,8.237,0,0,0,5.555,15.27a7.864,7.864,0,0,0,2.273.432c.126.008.252.016.377.016a8.257,8.257,0,0,0,6.66-3.358C15.392,11.63,15.25,11.166,15.117,10.953Z" transform="translate(1.813 1.573)" fill="#fff"/>
+      <path id="Vector-2" data-name="Vector" d="M0,0H18.872V18.872H0Z" transform="translate(18.872 18.872) rotate(180)" fill="#fff" opacity="0"/>
+    </g>
+  </g>
+</svg>

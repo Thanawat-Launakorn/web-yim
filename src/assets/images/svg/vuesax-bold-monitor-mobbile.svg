@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.343" height="61.343" viewBox="0 0 61.343 61.343">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.233" x2="0.5" y2="1.411" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#473af7"/>
+      <stop offset="1" stop-color="#269ff3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="vuesax_bold_monitor-mobbile" data-name="vuesax/bold/monitor-mobbile" transform="translate(-552 -190)">
+    <g id="monitor-mobbile" transform="translate(552 190)">
+      <path id="Vector" d="M22.978.537A9.215,9.215,0,0,0,19.527,0H6.032C1.585,0,0,1.585,0,6.083V25.866a9.008,9.008,0,0,0,.562,3.527c.792,1.84,2.479,2.556,5.47,2.556h13.5c4.447,0,6.032-1.61,6.032-6.083V6.083C25.559,3.042,24.844,1.329,22.978.537ZM15.336,26.2H10.224a.435.435,0,0,1-.179-.026,1.585,1.585,0,0,1-1-.409,1.8,1.8,0,0,1-.741-1.482,1.931,1.931,0,0,1,1.917-1.917h5.112a1.917,1.917,0,1,1,0,3.834Z" transform="translate(30.671 24.282)" fill="url(#linear-gradient)"/>
+      <path id="Vector-2" data-name="Vector" d="M48.512,10.709v2.07a2.563,2.563,0,0,1-2.556,2.556H31.566c-6.543,0-9.866,3.348-9.866,9.917v23.31a2.563,2.563,0,0,1-2.556,2.556H14.16a1.815,1.815,0,1,1,0-3.629h4.984V37.7H10.2A10.727,10.727,0,0,1,0,26.991V10.709A10.728,10.728,0,0,1,10.735,0H37.8A10.723,10.723,0,0,1,48.512,10.709Z" transform="translate(5.137 5.112)" fill="url(#linear-gradient)"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H61.343V61.343H0Z" transform="translate(61.343 61.343) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>
