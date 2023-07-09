@@ -3,9 +3,11 @@ import classNames from "classnames";
 import Image from "next/image";
 import moonC from "@/assets/images/png/moonC.png";
 import sunC from "@/assets/images/png/sunC.png";
+import { useTheme } from "@/provider/app-theme";
 interface ISwitchTheme {}
 
-export const ToggleSwitch: FC<{ props: ISwitchTheme }> = ({ props }) => {
+export const ToggleSwitch: FC<{ props?: ISwitchTheme }> = ({ props }) => {
+  const { setTheme } = useTheme();
   const [isSelected, setSelected] = React.useState<boolean>(false);
   return (
     <div
@@ -20,7 +22,10 @@ export const ToggleSwitch: FC<{ props: ISwitchTheme }> = ({ props }) => {
     >
       <div
         className="absolute z-20 top-0 left-0"
-        onClick={() => setSelected(true)}
+        onClick={() => {
+          setSelected(true);
+          setTheme("light");
+        }}
       >
         <Image
           src={moonC}
@@ -38,7 +43,10 @@ export const ToggleSwitch: FC<{ props: ISwitchTheme }> = ({ props }) => {
       />
       <div
         className="absolute z-20 top-0 right-0"
-        onClick={() => setSelected(false)}
+        onClick={() => {
+          setSelected(false);
+          setTheme("dark");
+        }}
       >
         <Image
           src={sunC}

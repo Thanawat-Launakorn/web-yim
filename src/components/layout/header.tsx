@@ -1,12 +1,12 @@
 "use client";
 import { FC } from "react";
-import { Row, Col, Layout } from "antd";
+import { Layout } from "antd";
 import React from "react";
 import logoYim from "@/assets/images/png/logoYim.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { MenuOutlined } from "@ant-design/icons";
-import { useActive } from "@/provider/provider-active";
+import { useActive } from "@/provider/app-active";
 import { ToggleSwitch } from "../button";
 interface IHeader {
   className?: string;
@@ -16,7 +16,6 @@ interface IHeader {
 const AppHeader: FC<IHeader> = ({ className, services }) => {
   const [active, setActive] = React.useState<string>("");
   const { active: at, setActive: setAt, onActive } = useActive();
-
   const useNav = (v: string) => {
     setActive(v);
     setAt(false);
@@ -24,7 +23,7 @@ const AppHeader: FC<IHeader> = ({ className, services }) => {
 
   return (
     <Layout.Header
-      className={`${className} fixed top-0 z-30  header w-screen !px-[20px] sm:!px-[50px] ${
+      className={`${className} fixed top-0 z-30 header w-screen !px-[20px] sm:!px-[50px] ${
         !!services ? "!h-[105px] sm:!h-[120px]" : "sm:!h-[60px]"
       }`}
     >
@@ -54,10 +53,10 @@ const AppHeader: FC<IHeader> = ({ className, services }) => {
         </div>
         {/* toggle theme */}
         <div className="flex flex-row align-middle items-center">
-          <ToggleSwitch props={{}} />
-          <div className="block sm:hidden">
+          <ToggleSwitch />
+          <div className="flex sm:hidden">
             <MenuOutlined
-              className="text-[white] text-xl cursor-pointer"
+              className="dark:text-[white] text-xl cursor-pointer"
               onClick={() => onActive(at)}
             />
           </div>
@@ -98,7 +97,15 @@ const MenuItems: FC<{ props: IMenuItems }> = ({ props }) => {
         .filter((e: string) => e !== "home")
         .map((e) => {
           return (
-            <Link href={e.replaceAll(" ", "")} key={e}>
+            <Link
+              href={
+                e === "services"
+                  ? "services/development"
+                  : `/${e.replaceAll(" ", "")}`
+              }
+              key={e}
+              replace
+            >
               <div
                 className={`capitalize text-white font-normal cursor-pointer my-0 mx-5 lg:mx-10 tracking-wide transition-all delay-75 hover:text-[#3C97FF]
           ${active.split("/")[1] === e && "!text-[#3C97FF]"}`}

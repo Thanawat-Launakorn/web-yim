@@ -20,6 +20,7 @@ const HomeTechnology: FC<{ props: ITec }> = ({ props }) => {
           style={{
             color: "#0055B7",
             display: "grid",
+            fontWeight: 400,
             justifyContent: "center",
           }}
           level={4}

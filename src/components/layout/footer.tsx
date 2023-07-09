@@ -73,7 +73,7 @@ const AppFooter: FC<IFooter> = ({ services }) => {
     },
   ];
   return (
-    <Layout.Footer className="!bg-gradient-to-t to-[#080E1F] from-20% from-[#031932] !px-0 !py-10 wrapper">
+    <Layout.Footer className="!bg-gradient-to-t to-[#080E1F] from-20% from-[#031932] !px-20 !py-10 wrapper">
       <Container className="bg-transparent">
         <Row justify={"space-between"} align={"middle"}>
           <Col
@@ -83,7 +83,7 @@ const AppFooter: FC<IFooter> = ({ services }) => {
             span={24}
             xs={{ order: 2 }}
           >
-            <div className="flex flex-col justify-center overflow-y-scroll h-[200px] sm:h-auto sm:px-0 sm:block">
+            <div className="flex flex-col justify-center h-full sm:px-0 sm:block">
               <MenuLeft
                 props={{
                   data: IMockMenuLeft,

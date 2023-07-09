@@ -1,0 +1,7 @@
+.group .move-text, .group .title-hovered .group .des {
+    transition: all ease-in-out .4s;
+}
+
+.group:hover .move-text {
+    transform: translate3d(-50px, -30px, 0);
+}

@@ -20,10 +20,7 @@ const Container = ({
   return (
     <React.Fragment>
       {!optional && (
-        <div
-          style={style}
-          className={`${className}  w-full pt-20 px-[20px] sm:px-[50px] lg:px-24 `}
-        >
+        <div style={style} className={`${className}  w-full pt-20 px-0`}>
           {children}
         </div>
       )}

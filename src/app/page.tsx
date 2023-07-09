@@ -1,5 +1,5 @@
+"use client";
 import Container from "@/components/container";
-import DLogoPage from "@/components/display/page-home/c-logopage";
 import LogoYim from "@/components/svg/logoYim"; //logoYimDesktop
 import CElec from "@/components/svg/elec";
 import CElectNoLight from "@/components/svg/elecNoLight";
@@ -13,10 +13,16 @@ import tech1 from "@/assets/images/png/tech-1.png";
 import { StaticImageData } from "next/image";
 import man from "@/assets/images/png/manInRounded.png";
 import COurServies from "@/components/display/c-ourservices";
+import Layout1 from "@/components/display/c-layout1";
+import Layout2 from "@/components/display/c-layout2";
+import Layout3 from "@/components/display/c-layout3";
+import mobile from "@/assets/images/png/mobile.png";
+import monitorWithPhone from "@/assets/images/png/monitorWithPhone.png";
+import monitorCar from "@/assets/images/png/monitorCar.png";
 
 export default function Home() {
   return (
-    <Container className="flex min-h-screen flex-col bg-[#081224]">
+    <Container className="flex min-h-screen flex-col dark:bg-bgdark bg-bgWhite">
       <div className="hidden md:block">
         <HomeLogoPage
           props={{
@@ -28,7 +34,7 @@ export default function Home() {
         />
       </div>
       <div className="block sm:hidden">
-        <DLogoPage
+        <HomeLogoPage
           props={{
             mobile: true,
             logo: "",
@@ -37,7 +43,6 @@ export default function Home() {
           }}
         />
       </div>
-
       <HomeCustomer
         props={{
           tCon: "Customer",
@@ -60,6 +65,43 @@ export default function Home() {
           logo: <CMonitor />,
         }}
       />
+      <div className="flex flex-col">
+        <div>
+          <Layout1
+            props={{
+              svg: monitorCar,
+              description:
+                "Smart Building Solutionภาพรวมการออกแบบของระบบงานการจัดการอาคารอัจฉริยะโดยระบบจะมีโมดูลต่าง ๆเพื่อสามารถไปจัดการและบริหารจัดการอาคารได้อย่างมีประสิทธิภาพโดยมีระบบต่างๆ ที่มีอยู่ในโครงการ ",
+              title: "Interface Detail Design",
+              type: "Digital Focus",
+            }}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
+          <div className="bg-[#00244D]">
+            <Layout2
+              props={{
+                svg: monitorWithPhone,
+                title: "Q CHARGE",
+                description:
+                  "management system with in various projectwith functions and details that cover the whole project",
+                type: "Application",
+              }}
+            />
+          </div>
+          <div className="bg-[#012752]">
+            <Layout3
+              props={{
+                svg: mobile,
+                title: "Q CHARGE",
+                description:
+                  "management system with in various projectwith functions and details that cover the whole project",
+                type: "Application",
+              }}
+            />
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }

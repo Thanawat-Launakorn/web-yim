@@ -16,7 +16,7 @@ type ProviderProps = {
   children?: React.ReactNode;
 };
 
-const Active: FC<ProviderProps> = ({ children }) => {
+const AppActive: FC<ProviderProps> = ({ children }) => {
   const [active, setActive] = React.useState<boolean>(false);
   const [onDropdown, setDropdown] = React.useState<boolean>(false);
 
@@ -40,4 +40,4 @@ const Active: FC<ProviderProps> = ({ children }) => {
 };
 
 export const useActive = () => React.useContext(Context);
-export default Active;
+export default AppActive;

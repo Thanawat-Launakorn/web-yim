@@ -1,9 +1,9 @@
 "use client";
-import { useActive } from "@/provider/provider-active";
+import { useActive } from "@/provider/app-active";
 import { CloseOutlined, DownOutlined, UpOutlined } from "@ant-design/icons";
 import React, { FC } from "react";
-import logoYim from "../../assets/images/png/logoYim.png";
-import { IconItems } from "./header";
+import logoYim from "@/assets/images/png/logoYim.png";
+import { IconItems } from "../../header";
 
 interface ISidebar {
   active: boolean;

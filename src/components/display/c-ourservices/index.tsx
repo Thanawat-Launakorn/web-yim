@@ -17,18 +17,18 @@ const COurServies: FC<{ props: IOurservices }> = ({ props }) => {
   return (
     <React.Fragment>
       <Typography.Title
+        level={4}
         style={{
-          color: "#0055B7",
           display: "grid",
+          fontWeight: 400,
           justifyContent: "center",
         }}
-        level={4}
-        className="sm:my-36 !opacity-0 sm:opacity-100"
+        className="sm:my-36 sm:opacity-100 dark:text-titleDark"
       >
         {tCon}
       </Typography.Title>
       <div
-        className="bg-[#011731] rounded-md pb-14 px-[12px] pt-[12px] sm:px-[60px] sm:pt-16  xl:pb-0  lg:mx-[100px] xl:mx-[160px] "
+        className="bg-[#011731] rounded-md pb-14 px-[12px] pt-[12px] sm:px-[60px] sm:pt-16  xl:pb-0  lg:mx-[100px] xl:mx-[160px]"
         data-aos="fade-up"
       >
         <Row gutter={64} className="">
@@ -68,7 +68,7 @@ const COurServies: FC<{ props: IOurservices }> = ({ props }) => {
               {title}
             </Typography.Title>
             <ColoredLine color="white" className="my-5" />
-            <div className="h-[190px] sm:w-[auto] overflow-y-scroll overflow-x-hidden sm:h-auto">
+            <div className="sm:w-[auto] overflow-x-hidden sm:h-auto">
               <Typography.Paragraph
                 style={{
                   color: "#969595",

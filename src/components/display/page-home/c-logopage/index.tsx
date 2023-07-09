@@ -3,8 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { Typography } from "antd";
 import { FC } from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
 import logoYimMobile from "@/assets/images/png/logoYimMobile.png"; //logoYimMobile
 
 interface ILogoPage {

@@ -1,12 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+ 
     extend: {
+      colors:{
+        bgdark: '#081224',
+        bgwhite: '#FFFFFF',
+        primaryDark: '#FFFFFF',
+        secondaryDark: '#3C97FF',
+
+        titleDark: '#0055B7'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

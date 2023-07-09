@@ -17,6 +17,7 @@ const HomeCustomer: FC<{ props: ICustomer }> = ({ props }) => {
           style={{
             color: "#0055B7",
             display: "grid",
+            fontWeight: 400,
             justifyContent: "center",
             marginBottom: 0,
           }}

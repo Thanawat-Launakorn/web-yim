@@ -26,6 +26,16 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.1.4"
+    "babel-plugin-styled-components": "^2.1.4",
+    "babel-plugin-twin": "^1.1.0",
+    "encoding": "^0.1.13"
+  },
+  "babelMacros": {
+    "twin": {
+      "styled": {
+        "import": "default",
+        "from": "styled-components"
+      }
+    }
   }
 }
