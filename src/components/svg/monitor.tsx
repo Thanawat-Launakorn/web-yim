@@ -4,7 +4,6 @@ interface ICMonitor {
   active?: boolean;
 }
 const CMonitor: FC<ICMonitor> = ({ active }) => {
-  const isActive = active ? "#3C97FF" : "#FFFFFF";
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,8 +12,8 @@ const CMonitor: FC<ICMonitor> = ({ active }) => {
       data-name="vuesax/linear/monitor"
     >
       <g
-        fill={isActive}
-        stroke={isActive}
+        fill={"#3C97FF"}
+        stroke={"#3C97FF"}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}

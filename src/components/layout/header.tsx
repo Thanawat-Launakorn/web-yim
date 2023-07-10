@@ -27,7 +27,7 @@ const AppHeader: FC<IHeader> = ({ className, services }) => {
         !!services ? "!h-[105px] sm:!h-[120px]" : "sm:!h-[60px]"
       }`}
     >
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between align-middle items-center">
         {/* logo */}
         <div className="flex flex-row">
           <div>
@@ -53,10 +53,10 @@ const AppHeader: FC<IHeader> = ({ className, services }) => {
         </div>
         {/* toggle theme */}
         <div className="flex flex-row align-middle items-center">
-          <ToggleSwitch />
+          <ToggleSwitch props={{ className: "mt-[14px] sm:mt-0" }} />
           <div className="flex sm:hidden">
             <MenuOutlined
-              className="dark:text-[white] text-xl cursor-pointer"
+              className="dark:text-[white] text-xl cursor-pointer mt-[10px] sm:mt-0"
               onClick={() => onActive(at)}
             />
           </div>
@@ -100,14 +100,14 @@ const MenuItems: FC<{ props: IMenuItems }> = ({ props }) => {
             <Link
               href={
                 e === "services"
-                  ? "services/development"
+                  ? "/services/development"
                   : `/${e.replaceAll(" ", "")}`
               }
               key={e}
               replace
             >
               <div
-                className={`capitalize text-white font-normal cursor-pointer my-0 mx-5 lg:mx-10 tracking-wide transition-all delay-75 hover:text-[#3C97FF]
+                className={`capitalize text-white font-normal cursor-pointer my-0 mx-5 lg:mx-[45px] tracking-wide transition-all delay-75 hover:text-[#3C97FF]
           ${active.split("/")[1] === e && "!text-[#3C97FF]"}`}
               >
                 {e}

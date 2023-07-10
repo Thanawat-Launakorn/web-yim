@@ -1,26 +1,14 @@
 "use client";
+import { CInput } from "@/components/input";
 import Management from "@/components/svg/management";
 import Migration from "@/components/svg/migration";
 import CMonitor from "@/components/svg/monitor";
 import MonitorMobbile from "@/components/svg/monitorMobile";
 import { useActive } from "@/provider/app-active";
 import { SearchOutlined } from "@ant-design/icons";
-import { Input, Row, Col, Avatar, Typography, TabsProps, Tabs } from "antd";
+import { Row, Col, Avatar, Typography, TabsProps, Tabs } from "antd";
 import React, { FC } from "react";
 import styled from "styled-components";
-type Props = {};
-
-const StyledInput = styled(Input)`
-  color: #333 !important;
-  padding: 8px 25px !important;
-  background-color: #0f1a2f !important;
-  .ant-input-affix-wrapper {
-    border: none;
-  }
-  .ant-input {
-    background-color: transparent;
-  }
-`;
 
 const SiderMenuWrapper = styled.div<{ $active?: boolean }>`
   .ant-typography {
@@ -110,7 +98,7 @@ export const Sider: FC<SiderProps> = ({}) => {
   return (
     <React.Fragment>
       <div className="sm:p-[20px] z-40  overflow-y-hidden sm:fixed top-[100px] xl:top-[55px]">
-        <StyledInput
+        <CInput
           placeholder="Quick Search"
           suffix={<SearchOutlined />}
           size={"small"}

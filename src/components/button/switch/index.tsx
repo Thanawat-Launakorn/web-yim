@@ -4,7 +4,9 @@ import Image from "next/image";
 import moonC from "@/assets/images/png/moonC.png";
 import sunC from "@/assets/images/png/sunC.png";
 import { useTheme } from "@/provider/app-theme";
-interface ISwitchTheme {}
+interface ISwitchTheme {
+  className?: string;
+}
 
 export const ToggleSwitch: FC<{ props?: ISwitchTheme }> = ({ props }) => {
   const { setTheme } = useTheme();
@@ -12,7 +14,7 @@ export const ToggleSwitch: FC<{ props?: ISwitchTheme }> = ({ props }) => {
   return (
     <div
       className={classNames(
-        `flex w-[80px] h-10 relative cursor-pointer ${
+        `flex w-[80px] h-10 relative cursor-pointer ${props?.className} ${
           isSelected ? "bg-[#3C97FF]" : "bg-[#224266]"
         }  rounded-full transition-all ease-linear duration-[.3] shadow-lg scale-[.6]`,
         {

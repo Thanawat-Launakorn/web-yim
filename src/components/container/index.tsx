@@ -20,7 +20,7 @@ const Container = ({
   return (
     <React.Fragment>
       {!optional && (
-        <div style={style} className={`${className}  w-full pt-20 px-0`}>
+        <div style={style} className={`${className}  w-full pt-20`}>
           {children}
         </div>
       )}
@@ -36,7 +36,7 @@ const Container = ({
       {optional === "side" && (
         <Space
           style={style}
-          className={`${className}  mt-[25px]  md:mt-[80px] lg:mt-[70px] xl:mt-[60px]  w-full`}
+          className={`${className}  mt-[25px]  md:mt-[80px] lg:mt-[70px] xl:mt-[0px]  w-full`}
           direction="vertical"
         >
           {children}

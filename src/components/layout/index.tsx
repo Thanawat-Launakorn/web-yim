@@ -8,6 +8,7 @@ import { AppSide } from "./side/c-side";
 import { useActive } from "@/provider/app-active";
 import AppTheme from "@/provider/app-theme";
 import AppContent from "./content";
+import { Sider } from "./side";
 const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
   const pathname = usePathname();
   const pathServices = pathname.includes("/services");
@@ -28,7 +29,7 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }) => {
             setDropdown(false);
           }}
           // ref={sideRef}
-          children={<></>}
+          children={<Sider />}
         />
         {pathServices ? <AppHeader services /> : <AppHeader />}
         <AppContent>{children}</AppContent>
