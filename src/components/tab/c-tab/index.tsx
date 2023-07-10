@@ -39,14 +39,16 @@ const StyledTabs = styled(Tabs)<{ $active?: boolean }>`
 
 export const CTabs: FC<ITabs> = ({ menu, onPressed }) => {
   const pathname = usePathname();
+
   const pathSplit = pathname.split("/")[1];
+
   const { active } = useActive();
   return (
     <StyledTabs
       onTabClick={(e: any) => onPressed?.(e)}
-      className={`${!active && "sticky"} left-0 ${
-        pathSplit === "services" && "!top-[60px]"
-      } sm:top-0 z-40 bg-transparent -translate-y-5`}
+      className={`${!active && "sticky"} left-0 min-w-full ${
+        pathSplit === "services" && "!top-[160px]"
+      } sm:top-0 z-40 bg-transparent translate-y-[-100px]`}
       tabBarGutter={50}
       size="large"
       tabPosition="top"

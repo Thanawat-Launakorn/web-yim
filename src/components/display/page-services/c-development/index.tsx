@@ -85,7 +85,7 @@ const CDevelopment: FC<{ props: IDevelopment }> = ({ props }) => {
             {title}
           </Typography.Title>
           <ColoredLine color="white" />
-          <div className="h-[230px] sm:h-[auto] overflow-y-scroll">
+          <div className="sm:h-[auto]">
             <Typography.Text
               style={{
                 color: "#969595",

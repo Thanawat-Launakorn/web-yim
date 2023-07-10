@@ -1,9 +1,7 @@
 "use client";
-import Container from "@/components/container";
 import LogoYim from "@/components/svg/logoYim"; //logoYimDesktop
 import CElec from "@/components/svg/elec";
 import CElectNoLight from "@/components/svg/elecNoLight";
-import logoYimMobile from "@/assets/images/png/logoYimMobile.png"; //logoYimMobile
 import elec from "@/assets/images/png/elec.png";
 import HomeLogoPage from "@/components/display/page-home/c-logopage";
 import HomeCustomer from "@/components/display/page-home/c-customer";
@@ -19,30 +17,22 @@ import Layout3 from "@/components/display/c-layout3";
 import mobile from "@/assets/images/png/mobile.png";
 import monitorWithPhone from "@/assets/images/png/monitorWithPhone.png";
 import monitorCar from "@/assets/images/png/monitorCar.png";
+import logoYimMobile from "@/assets/images/png/logoYimMobile.png"; //logoYimMobile
+
+import React from "react";
 
 export default function Home() {
   return (
-    <Container className="flex min-h-screen flex-col dark:bg-bgdark bg-bgWhite">
-      <div className="hidden md:block">
-        <HomeLogoPage
-          props={{
-            elecNoLight: <CElectNoLight />,
-            elec: <CElec />,
-            logo: <LogoYim height={192} width={444} />,
-            title: "BUSINESS IN SOFTWARE AND HARDWARE DEVELOPMENT",
-          }}
-        />
-      </div>
-      <div className="block sm:hidden">
-        <HomeLogoPage
-          props={{
-            mobile: true,
-            logo: "",
-            title: "BUSINESS IN SOFTWARE AND HARDWARE DEVELOPMENT",
-            elec: "",
-          }}
-        />
-      </div>
+    <div className="overflow-x-hidden">
+      <HomeLogoPage
+        props={{
+          logo: <LogoYim height={192} width={444} />,
+          title: "BUSINESS IN SOFTWARE AND HARDWARE DEVELOPMENT",
+          elec: elec,
+          elecNoLight: elec,
+          logoMobile: logoYimMobile,
+        }}
+      />
       <HomeCustomer
         props={{
           tCon: "Customer",
@@ -102,6 +92,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
