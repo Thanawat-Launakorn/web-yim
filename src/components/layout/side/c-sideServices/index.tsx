@@ -34,50 +34,9 @@ const StyledTabs = styled(Tabs)<{
     color: white !important;
   }
 
-  .ant-tabs-nav-list {
-    position: absolute;
-    width: 200px;
-    height: 100%;
-    left: 0;
-    margin-top: 40px;
-  }
-
   .ant-tabs-nav-list > div {
     color: #969595;
     font-weight: 200;
-  }
-
-  .ant-tabs-nav-list > div[data-node-key="1"]::before {
-    position: absolute;
-    top: -40px;
-    left: -36px;
-    width: 100%;
-    height: 100%;
-    padding-top: 5px;
-    content: "Web Development";
-    color: ${({ $active }) =>
-      $active?.side1 ? "#3c97ff !important" : "white"};
-    z-index: 2;
-
-    font-weight: 400;
-  }
-
-  .ant-tabs-nav-list > div[data-node-key="4"]::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -10px;
-    top: -35px;
-    padding-top: 5px;
-    content: "Mobile App Development";
-    color: ${({ $active }) =>
-      $active?.side2 ? "#3c97ff !important" : "white"};
-    z-index: 2;
-    font-weight: 400;
-  }
-
-  .ant-tabs-nav-list > div[data-node-key="4"] {
-    margin-top: 50px !important;
   }
 `;
 type SiderProps = {};
@@ -105,7 +64,6 @@ export const Sider: FC<SiderProps> = ({}) => {
         />
         {sideMenuMock.map((element, idx) => {
           const _to = element.title.toLowerCase().replaceAll(" ", "");
-
           return (
             <SideMenu
               //   active={_to === pathSplit}

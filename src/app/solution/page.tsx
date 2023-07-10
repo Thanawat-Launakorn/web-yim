@@ -7,8 +7,13 @@ type Props = {};
 
 export default function Solution({}: Props) {
   return (
-    <div className="overflow-x-hidden px-20">
-      <CTopSolution image={solution} />
+    <div className="overflow-x-hidden sm:px-20">
+      <CTopSolution
+        image={solution}
+        title=" Product"
+        description="Websites that make it easier for customers to work with."
+        carouselImages={[{ image: solution }, { image: solution }]}
+      />
     </div>
   );
 }

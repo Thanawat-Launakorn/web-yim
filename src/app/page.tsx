@@ -18,7 +18,6 @@ import mobile from "@/assets/images/png/mobile.png";
 import monitorWithPhone from "@/assets/images/png/monitorWithPhone.png";
 import monitorCar from "@/assets/images/png/monitorCar.png";
 import logoYimMobile from "@/assets/images/png/logoYimMobile.png"; //logoYimMobile
-
 import React from "react";
 
 export default function Home() {
