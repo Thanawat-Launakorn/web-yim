@@ -12,7 +12,11 @@ export default function Solution({}: Props) {
         image={solution}
         title=" Product"
         description="Websites that make it easier for customers to work with."
-        carouselImages={[{ image: solution }, { image: solution }]}
+        carouselImages={[
+          { image: solution },
+          { image: solution },
+          { image: solution },
+        ]}
       />
     </div>
   );
