@@ -14,7 +14,7 @@ const Layout1: FC<{ props: ILayout1 }> = ({ props }) => {
   const { svg, type, title, description } = props;
   return (
     <React.Fragment>
-      <div className="relative bg-[#002043] py-10 px-[30px] sm:px-5 lg:px-10 xl:px-32">
+      <div className="relative bg-[#002043] py-10 px-[30px] sm:px-5 lg:px-10 xl:px-44">
         <Row align={"middle"} justify="space-between" gutter={64}>
           <Col
             xl={{ span: 5 }}
@@ -49,13 +49,8 @@ const Layout1: FC<{ props: ILayout1 }> = ({ props }) => {
               {description}
             </Typography.Paragraph>
           </Col>
-          <Col
-            xl={{ span: 19 }}
-            lg={{ span: 19 }}
-            className=""
-            data-aos="zoom-in"
-          >
-            <Image src={svg} alt="image" className="object-contain " />
+          <Col xl={{ span: 19 }} lg={{ span: 19 }} data-aos="zoom-in">
+            <Image src={svg} alt="image" className="object-contain scale-90" />
           </Col>
         </Row>
       </div>
