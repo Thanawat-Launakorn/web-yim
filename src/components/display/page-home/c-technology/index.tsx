@@ -15,7 +15,7 @@ const HomeTechnology: FC<{ props: ITec }> = ({ props }) => {
 
   return (
     <React.Fragment>
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen mx-20">
         <Typography.Title
           style={{
             color: "#0055B7",
