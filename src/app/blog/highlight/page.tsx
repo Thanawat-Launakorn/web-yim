@@ -3,6 +3,7 @@ import { Row, Col, Typography, Divider, Button } from "antd";
 import React, { FC } from "react";
 import Container from "../../../components/container";
 import CHighlight from "@/components/display/page-blog/c-highlight";
+import CMHighlight from "@/components/display/page-blog/c-highlight/mobile";
 
 interface IHighlight {}
 const Highlight: FC<{ props: IHighlight }> = ({ props }) => {
@@ -19,34 +20,12 @@ const Highlight: FC<{ props: IHighlight }> = ({ props }) => {
     <React.Fragment>
       <Container className="bg-[#081224] pb-10">
         <Row>
-          <Col span={24}>
-            <Row className="pt-5 pb-5">
-              <Col span={24}>
-                <Typography.Text
-                  style={{
-                    color: "#3C97FF",
-                  }}
-                >
-                  Highlight
-                </Typography.Text>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={24}>
-                <Row>
-                  <Col span={24} className="sm:block hidden">
-                    <CHighlight props={Mock[0]} />
-                  </Col>
-                </Row>
-              </Col>
-              <Col span={24}>
-                <Row>
-                  <Col className="sm:hidden block">
-                    {/* <CMHighlight props={Mock[0]} /> */}
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <Col span={24} className="sm:block hidden">
+            <CHighlight props={Mock[0]} />
+          </Col>
+
+          <Col span={24} className="sm:hidden block ">
+            <CMHighlight props={Mock[0]} />
           </Col>
         </Row>
       </Container>

@@ -51,7 +51,7 @@ const Actical: FC<{ props: IActical }> = ({ props }) => {
             </Row>
 
             {/* className="!grid grid-cols-2  gap-5 pt-10 justify-center lg:grid-cols-2  lg:scale-100 " */}
-            <Row className="sm:block hidden">
+            <Row className="sm:block hidden pt-8 m-5">
               <Col span={24}>
                 <Row gutter={[20, 20]}>
                   <Col md={{ span: 12 }}>

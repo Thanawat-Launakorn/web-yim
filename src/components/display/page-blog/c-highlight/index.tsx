@@ -3,11 +3,12 @@ import { Button, Col, Divider, Image, Modal, Row, Typography } from "antd";
 import React, { FC, useState } from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
 import ReactPlayer from "react-player";
+import ColoredLine from "../../c-colorline";
 interface IHighlight {
-  des?: string;
-  title?: string;
+  des: string;
+  title: string;
   activity: string;
-  url?: string;
+  url: string;
 }
 // https://youtu.be/XwNKiSlJQCI
 export const CHighlight: FC<{ props: IHighlight }> = ({ props }) => {
@@ -16,6 +17,21 @@ export const CHighlight: FC<{ props: IHighlight }> = ({ props }) => {
   return (
     <React.Fragment>
       <Col span={24}>
+        <Row>
+          <Col span={24}>
+            <Row className="pt-5 pb-5">
+              <Col span={24}>
+                <Typography.Text
+                  style={{
+                    color: "#3C97FF",
+                  }}
+                >
+                  Highlight
+                </Typography.Text>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
         <Row className="">
           <Col
             // xl={{ span: 16 }}
@@ -26,10 +42,6 @@ export const CHighlight: FC<{ props: IHighlight }> = ({ props }) => {
           >
             <Row className="p-5" style={{ height: "500px" }}>
               <Col span={24} className="p-5">
-                {/* <CYoutube
-                props={{ opts, onReady: onPlayerReady }}
-                videoId={"XwNKiSlJQCI"}
-              /> */}
                 {/* <ReactPlayer
                   url={url}
                   width={"100%"}
@@ -62,7 +74,7 @@ export const CHighlight: FC<{ props: IHighlight }> = ({ props }) => {
                 <Typography.Title level={3} style={{ color: "#FFFFFF" }}>
                   {title}
                 </Typography.Title>
-                <Divider className="bg-[#969595]" />
+                <ColoredLine color="#3c97ff" />
               </Col>
 
               <Col span={18}>

@@ -43,7 +43,7 @@ const CActivity: FC<{
               </Row>
             </Col>
             <Row className=" content-center">
-              <Col span={13} className="">
+              <Col span={13} className="pl-5">
                 <Typography.Title level={5} style={{ color: "#3C97FF" }}>
                   {title}
                 </Typography.Title>
@@ -62,12 +62,13 @@ const CActivity: FC<{
               >
                 {updateAt}
               </Col>
-
-              <Col span={24} className="p-2 text-left">
-                <Typography.Text style={{ color: "#FFFFFF" }} className="">
-                  {des}
-                </Typography.Text>
-              </Col>
+              <Row className="justify-center">
+                <Col span={24} className="p-4 text-left">
+                  <Typography.Text style={{ color: "#FFFFFF" }} className="">
+                    {des}
+                  </Typography.Text>
+                </Col>
+              </Row>
             </Row>
             {/* <div className={`absolute ${styledElec}`}>{elec} </div> */}
           </Row>

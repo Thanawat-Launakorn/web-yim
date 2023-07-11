@@ -15,7 +15,7 @@ const CActical: FC<{ props: ICardActical }> = ({ props }) => {
   //   hover:border shadow-xl border-[#263348]
   return (
     <React.Fragment>
-      <Row className=" bg-[#171E2B] rounded-[12px]   content-center justify-center ">
+      <Row className=" bg-[#171E2B] rounded-[12px]   content-center justify-center hover:border shadow-xl border-[#263348]">
         <Col span={24} className="">
           <Row className="">
             <Col
@@ -44,7 +44,7 @@ const CActical: FC<{ props: ICardActical }> = ({ props }) => {
                         {title}
                       </Typography.Title>
                     </Col>
-                    <Col sm={{ span: 24 }} span={20} className="text-left">
+                    <Col sm={{ span: 24 }} span={20} className="text-left p-3">
                       <Typography.Text
                         style={{ color: "#B2AFAF", fontSize: "14px" }}
                       >
