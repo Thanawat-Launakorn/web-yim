@@ -73,7 +73,7 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
                 color: "#FFFFFF",
                 fontSize: 14,
               }}
-              to="Actical"
+              to="actical"
               spy={true}
               smooth={true}
               offset={0}

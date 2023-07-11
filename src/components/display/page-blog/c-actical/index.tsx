@@ -22,12 +22,12 @@ const CActical: FC<{ props: ICardActical }> = ({ props }) => {
               lg={{ span: 9 }}
               xl={{ span: 9 }}
               sm={{ span: 24 }}
-              className="object-cover content-center text-center"
+              className="object-cover content-center text-center justify-center"
             >
               <Image
                 alt=""
                 src={img}
-                className="rounded-[12px]   md:scale-90  sm:scale-75"
+                className="rounded-[12px] scale-50 sm:scale-50  md:scale-90  "
               />
             </Col>
             <Col

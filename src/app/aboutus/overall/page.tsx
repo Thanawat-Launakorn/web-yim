@@ -6,7 +6,7 @@ import {
   CProject,
   CTOverall,
 } from "@/components/display/page-aboutus/c-overall";
-import { Col } from "antd";
+import { Col, Row } from "antd";
 import { FC } from "react";
 import chartbar from "@/assets/images/chartbar.png";
 import chartpie from "@/assets/images/chartpie.png";
@@ -16,31 +16,51 @@ import { CDetail } from "@/app/services/development/content/highlight";
 
 interface IOverall {}
 export const Overall: FC<{ props: IOverall }> = ({ props }) => {
-  const overall = [chartbar, chartpie, chartlayerde];
+  const EnterpriseSIchartbar = [chartbar];
+  const Digitalchartpie = [chartpie];
+  const Projectchartlayerde = [chartlayerde];
+  const Overall = [
+    {
+      title: "Enterprise & SI",
+      des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
+      img: [...EnterpriseSIchartbar],
+    },
+    {
+      title: "Digital Transformation",
+      des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
+      img: [...Digitalchartpie],
+    },
+    {
+      title: "Project",
+      des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
+      img: [...Projectchartlayerde],
+    },
+  ];
   return (
     <React.Fragment>
-      <Container className="bg-[#081224]  lg:pt-10 pb-10">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-2 ">
-          <Col className="">
+      <Container className="bg-[#081224]  lg:pt-5 pb-10 p-5">
+        <Row className="sm:scale-90 md:scale-100" gutter={[10, 10]}>
+          <Col xl={{ span: 6 }} md={{ span: 12 }} span={24} className="">
             <CTOverall props={{ tOverall: "Overall" }} />
           </Col>
 
-          <Col className="">
+          <Col xl={{ span: 6 }} md={{ span: 12 }} span={24} className="">
             <COverall
               props={{
-                content: {
+                data: {
                   title: "Enterprise & SI",
                   des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
                   img: chartbar,
                 },
+                tOverall: "Overall",
               }}
             />
           </Col>
 
-          <Col>
+          <Col xl={{ span: 6 }} md={{ span: 12 }} span={24}>
             <CDigital
               props={{
-                content: {
+                data: {
                   title: "Digital Transformation",
                   des: "Helps to solve problems for entrepreneurs and upgrade business in technology and innovation.",
                   img: chartpie,
@@ -49,10 +69,10 @@ export const Overall: FC<{ props: IOverall }> = ({ props }) => {
             />
           </Col>
 
-          <Col>
+          <Col xl={{ span: 6 }} md={{ span: 12 }} span={24}>
             <CProject
               props={{
-                content: {
+                data: {
                   title: "Project",
                   des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
                   img: chartlayerde,
@@ -60,7 +80,7 @@ export const Overall: FC<{ props: IOverall }> = ({ props }) => {
               }}
             />
           </Col>
-        </div>
+        </Row>
       </Container>
     </React.Fragment>
   );

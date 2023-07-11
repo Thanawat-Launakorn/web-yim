@@ -34,7 +34,7 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
     <Container className="bg-[#081224] pt-5">
       <Row>
         <Col span={24}>
-          <Row className="">
+          <Row className="px-5">
             <Col flex="auto" className="text-start ">
               <Typography.Text style={{ color: "#3C97FF" }}>
                 Activity
@@ -47,7 +47,7 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
               <DatePicker picker="month" />
             </Col>
           </Row>
-          <Row className="justify-center pt-8" gutter={[30, 30]}>
+          <Row className="justify-center pt-8 " gutter={[30, 30]}>
             <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
               <CActivity props={CardMock[0]} />
             </Col>

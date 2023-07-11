@@ -94,7 +94,7 @@ export const Customer: FC<{ props: ICustomer }> = ({ props }) => {
   return (
     <React.Fragment>
       <Container className="bg-[#081224] pt-20 pb-20">
-        <div className="sm:block hidden">
+        <div className="sm:block hidden p-5">
           <CCustomer
             props={{
               data: customer,
@@ -103,7 +103,7 @@ export const Customer: FC<{ props: ICustomer }> = ({ props }) => {
           />
         </div>
 
-        <div className="sm:hidden block" key="index">
+        <div className="sm:hidden block p-5" key="index">
           <CMCustomer props={{ data: customer, tCus: "Customer" }} />
         </div>
       </Container>

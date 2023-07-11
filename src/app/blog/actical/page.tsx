@@ -36,7 +36,7 @@ const Actical: FC<{ props: IActical }> = ({ props }) => {
       <Container className="bg-[#081224]">
         <Row className=" pb-10">
           <Col span={24} className="mb-3">
-            <Row>
+            <Row className="px-7">
               <Col flex="auto" className="text-start ">
                 <Typography.Text style={{ color: "#3C97FF" }}>
                   Actical
@@ -50,8 +50,7 @@ const Actical: FC<{ props: IActical }> = ({ props }) => {
               </Col>
             </Row>
 
-            {/* className="!grid grid-cols-2  gap-5 pt-10 justify-center lg:grid-cols-2  lg:scale-100 " */}
-            <Row className="sm:block hidden pt-8 m-5">
+            <Row className=" pt-8 m-5">
               <Col span={24}>
                 <Row gutter={[20, 20]}>
                   <Col md={{ span: 12 }}>

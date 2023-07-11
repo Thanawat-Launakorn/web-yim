@@ -49,7 +49,7 @@ export const InTech: FC<{ props: IInTech }> = ({ props }) => {
     <React.Fragment>
       <Container className="bg-[#081224] pt-20">
         <div>
-          <Col>
+          <Col className="pl-10">
             <div className="  lg:text-[20px] text-center lg:text-left">
               <span
                 style={{ fontSize: 22 }}
@@ -59,7 +59,7 @@ export const InTech: FC<{ props: IInTech }> = ({ props }) => {
               </span>
             </div>
           </Col>
-          <Row className="" gutter={[15, 15]}>
+          <Row className="p-10" gutter={[15, 15]}>
             <Col xl={{ span: 8 }} sm={{ span: 12 }} span={24}>
               <CInTech props={CardMock[0]} />
             </Col>

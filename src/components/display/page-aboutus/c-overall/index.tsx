@@ -2,10 +2,10 @@
 import { Col } from "antd";
 import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
-
+import "@/assets/css/overall.css";
 interface IOverall {
   tOverall?: string;
-  content: {
+  data: {
     title: string;
     des: string;
     img: StaticImageData;
@@ -13,7 +13,7 @@ interface IOverall {
   };
 }
 export const COverall: FC<{ props: IOverall }> = ({ props }) => {
-  const { content, tOverall } = props;
+  const { data, tOverall } = props;
   return (
     <React.Fragment>
       <div>
@@ -26,6 +26,8 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
                 {tOverall}
               </span>
             </Col> */}
+          {/* <div className="absolute flex flex-col border-l-2 border-[#3c97ff] h-[300px] border-b-2 w-[400px] -translate-x-48 translate-y-32 border-r-2 "></div> */}
+
           <div
             // style={{ width: "250px", height: "300px" }}
             className="bg-gradient-to-b from-[#001845] from-30% via-[#3d4352] via-100%  to-[#c2c0c0] to-100% h-96 overall relative xl:scale-90 lg:scale-90"
@@ -33,7 +35,7 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
             <Col span={24} className="">
               <div className="flex justify-center img">
                 <Image
-                  src={content.img}
+                  src={data.img}
                   alt=""
                   className="scale-50  active:images !h-80"
                 />
@@ -45,14 +47,14 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
                 style={{ fontWeight: 450, fontSize: 16 }}
                 className="text-center title"
               >
-                {content.title}
+                {data.title}
               </div>
 
               <div
                 style={{ color: "#969595", fontSize: 13, fontWeight: 300 }}
                 className="text-left p-7 des -top-[50px] left-[8px] absolute"
               >
-                {content.des}
+                {data.des}
               </div>
             </Col>
           </div>
@@ -64,7 +66,7 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
 
 interface IDigital {
   tOverall?: string;
-  content: {
+  data: {
     title: string;
     des: string;
     img: StaticImageData;
@@ -72,7 +74,7 @@ interface IDigital {
   };
 }
 export const CDigital: FC<{ props: IOverall }> = ({ props }) => {
-  const { content, tOverall } = props;
+  const { data, tOverall } = props;
   return (
     <React.Fragment>
       <div>
@@ -92,7 +94,7 @@ export const CDigital: FC<{ props: IOverall }> = ({ props }) => {
             <Col span={24} className="">
               <div className="flex justify-center img">
                 <Image
-                  src={content.img}
+                  src={data.img}
                   alt=""
                   className="scale-50  active:images !h-80"
                 />
@@ -104,14 +106,14 @@ export const CDigital: FC<{ props: IOverall }> = ({ props }) => {
                 style={{ fontWeight: 450, fontSize: 16 }}
                 className="text-center title"
               >
-                {content.title}
+                {data.title}
               </div>
 
               <div
                 style={{ color: "#969595", fontSize: 13, fontWeight: 300 }}
                 className="text-left p-7 des -top-[50px] left-[8px] absolute"
               >
-                {content.des}
+                {data.des}
               </div>
             </Col>
           </div>
@@ -123,7 +125,7 @@ export const CDigital: FC<{ props: IOverall }> = ({ props }) => {
 
 interface IProject {
   tOverall?: string;
-  content: {
+  data: {
     title: string;
     des: string;
     img: StaticImageData;
@@ -131,7 +133,7 @@ interface IProject {
   };
 }
 export const CProject: FC<{ props: IOverall }> = ({ props }) => {
-  const { content, tOverall } = props;
+  const { data, tOverall } = props;
   return (
     <React.Fragment>
       <div>
@@ -151,7 +153,7 @@ export const CProject: FC<{ props: IOverall }> = ({ props }) => {
             <Col span={24} className="">
               <div className="flex justify-center img">
                 <Image
-                  src={content.img}
+                  src={data.img}
                   alt=""
                   className="scale-50  active:images !h-80"
                 />
@@ -163,14 +165,14 @@ export const CProject: FC<{ props: IOverall }> = ({ props }) => {
                 style={{ fontWeight: 450, fontSize: 16 }}
                 className="text-center title"
               >
-                {content.title}
+                {data.title}
               </div>
 
               <div
                 style={{ color: "#969595", fontSize: 13, fontWeight: 300 }}
                 className="text-left p-7 des -top-[50px] left-[8px] absolute"
               >
-                {content.des}
+                {data.des}
               </div>
             </Col>
           </div>
