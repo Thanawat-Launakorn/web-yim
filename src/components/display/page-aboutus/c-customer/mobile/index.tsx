@@ -7,6 +7,11 @@ interface IMCustomer {
   data: { title: string; logo: StaticImageData[] }[];
   tCus: string;
 }
+interface IMCustomerr {
+  title: string;
+  logo: StaticImageData;
+  // tCus?: string;
+}
 const CMCustomer: FC<{ props: IMCustomer }> = ({ props }) => {
   const { data, tCus } = props;
   return (
@@ -20,6 +25,7 @@ const CMCustomer: FC<{ props: IMCustomer }> = ({ props }) => {
             {tCus}
           </span>
         </Col>
+
         <Col span={24}>
           {data.map((ele, idx) => {
             const { logo, title } = ele;

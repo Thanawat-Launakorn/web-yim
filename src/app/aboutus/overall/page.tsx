@@ -13,6 +13,7 @@ import chartpie from "@/assets/images/chartpie.png";
 import chartlayerde from "@/assets/images/chartlayerde.png";
 import React from "react";
 import { CDetail } from "@/app/services/development/content/highlight";
+import { data } from "autoprefixer";
 
 interface IOverall {}
 export const Overall: FC<{ props: IOverall }> = ({ props }) => {
@@ -23,27 +24,40 @@ export const Overall: FC<{ props: IOverall }> = ({ props }) => {
     {
       title: "Enterprise & SI",
       des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
-      img: [...EnterpriseSIchartbar],
+      img: chartbar,
     },
     {
       title: "Digital Transformation",
       des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
-      img: [...Digitalchartpie],
+      img: chartpie,
     },
     {
       title: "Project",
       des: "Create systems for organizations and connect internal systems CRM, CMS,Payment Accounting, Data, etc.",
-      img: [...Projectchartlayerde],
+      img: chartlayerde,
     },
   ];
   return (
     <React.Fragment>
-      <Container className="bg-[#081224]  lg:pt-5 pb-10 p-5">
-        <Row className="sm:scale-90 md:scale-100" gutter={[10, 10]}>
-          <Col xl={{ span: 6 }} md={{ span: 12 }} span={24} className="">
+      <Container className="bg-[#081224]  lg:pt-5 pb-10 ">
+        <Row
+          className="sm:scale-90 md:scale-100 pr-2 justify-center"
+          gutter={[10, 10]}
+        >
+          {/* <Col xl={{ span: 6 }} md={{ span: 12 }} span={24} className="">
             <CTOverall props={{ tOverall: "Overall" }} />
-          </Col>
+          </Col> */}
 
+          {/* <Col xl={{ span: 6 }} md={{ span: 12 }} span={24}> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mr-5">
+            <CTOverall props={{ tOverall: "Overall" }} />
+            {Overall.map((e, idx) => (
+              <COverall key={idx} props={e} />
+            ))}
+          </div>
+          {/* </Col> */}
+
+          {/* 
           <Col xl={{ span: 6 }} md={{ span: 12 }} span={24} className="">
             <COverall
               props={{
@@ -79,7 +93,7 @@ export const Overall: FC<{ props: IOverall }> = ({ props }) => {
                 },
               }}
             />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </React.Fragment>

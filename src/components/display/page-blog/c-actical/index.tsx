@@ -36,9 +36,9 @@ const CActical: FC<{ props: ICardActical }> = ({ props }) => {
               xl={{ span: 15 }}
               sm={{ span: 24 }}
             >
-              <Row className="text-center content-center ">
+              <Row className="text-center  ">
                 <Col span={24}>
-                  <Row gutter={[0, 25]}>
+                  <Row gutter={[0, 15]}>
                     <Col span={24} className="pt-5">
                       <Typography.Title level={5} style={{ color: "#3C97FF" }}>
                         {title}
@@ -46,13 +46,13 @@ const CActical: FC<{ props: ICardActical }> = ({ props }) => {
                     </Col>
                     <Col sm={{ span: 24 }} span={20} className="text-left p-3">
                       <Typography.Text
-                        style={{ color: "#B2AFAF", fontSize: "14px" }}
+                        style={{ color: "#B2AFAF", fontSize: "13px" }}
                       >
                         {des}
                       </Typography.Text>
                     </Col>
                     <Col span={24}>
-                      <Row gutter={[0, 0]}>
+                      <Row gutter={[0, 0]} className="-translate-y-5 ">
                         <Col span={2}>
                           <FieldTimeOutlined
                             style={{ fontSize: "20px", color: "#5A5858" }}

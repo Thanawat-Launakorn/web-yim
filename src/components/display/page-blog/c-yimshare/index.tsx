@@ -59,7 +59,7 @@ const CYimShare: FC<{ props: IYimShare; onPressed?: () => void }> = ({
                 {title}
               </Typography.Title>
             </Col>
-            <Col span={24} className="-translate-y-5 px-2">
+            <Col span={24} className="-translate-y-5 px-2 ">
               <Divider className="bg-black" />
             </Col>
             <Col className="-translate-y-10 px-2">

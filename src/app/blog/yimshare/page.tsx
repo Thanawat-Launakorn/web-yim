@@ -51,7 +51,7 @@ const YimShare: FC<{ props: IYimShare }> = ({ props }) => {
   return (
     <React.Fragment>
       <Container className="bg-[#081224] pb-16">
-        <Row className="pt-10 pb-5">
+        <Row className="pt-10 pb-5 justify-center">
           <Col span={24} className="mb-3">
             <Row className="">
               <Col flex="auto" className="text-start ">
@@ -67,9 +67,10 @@ const YimShare: FC<{ props: IYimShare }> = ({ props }) => {
               </Col>
             </Row>
           </Col>
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {CardMock.map((e, idx) => (
               <CYimShare
+                key={idx}
                 props={e}
                 onPressed={() => {
                   setUrl(e.url);
@@ -78,12 +79,18 @@ const YimShare: FC<{ props: IYimShare }> = ({ props }) => {
               />
             ))}
           </div>
-          <Modal open={open} onCancel={Cancel}>
+          <Modal
+            open={open}
+            onCancel={Cancel}
+            footer={null}
+            closable={false}
+            width={550}
+          >
             <ReactPlayer
               url={videoUrl}
               controls
               width={"100%"}
-              height={"100%"}
+              height={"600px"}
               className="rounded-[12px] p-2 opacity-80"
             ></ReactPlayer>
           </Modal>

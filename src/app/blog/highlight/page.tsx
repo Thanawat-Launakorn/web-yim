@@ -19,15 +19,13 @@ const Highlight: FC<{ props: IHighlight }> = ({ props }) => {
   return (
     <React.Fragment>
       <Container className="bg-[#081224] pb-10">
-        <Row>
-          <Col span={24} className="sm:block hidden">
-            <CHighlight props={Mock[0]} />
-          </Col>
+        <div className="md:block hidden">
+          <CHighlight props={Mock[0]} />
+        </div>
 
-          <Col span={24} className="sm:hidden block ">
-            <CMHighlight props={Mock[0]} />
-          </Col>
-        </Row>
+        {/* <div className="md:hidden block ">
+          <CMHighlight props={Mock[0]} />
+        </div> */}
       </Container>
     </React.Fragment>
   );

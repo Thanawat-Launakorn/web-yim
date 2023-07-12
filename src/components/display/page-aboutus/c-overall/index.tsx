@@ -5,15 +5,14 @@ import Image, { StaticImageData } from "next/image";
 import "@/assets/css/overall.css";
 interface IOverall {
   tOverall?: string;
-  data: {
-    title: string;
-    des: string;
-    img: StaticImageData;
-    type?: string;
-  };
+
+  title: string;
+  des: string;
+  img: StaticImageData;
+  type?: string;
 }
 export const COverall: FC<{ props: IOverall }> = ({ props }) => {
-  const { data, tOverall } = props;
+  const { des, img, title, type, tOverall } = props;
   return (
     <React.Fragment>
       <div>
@@ -29,13 +28,13 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
           {/* <div className="absolute flex flex-col border-l-2 border-[#3c97ff] h-[300px] border-b-2 w-[400px] -translate-x-48 translate-y-32 border-r-2 "></div> */}
 
           <div
-            // style={{ width: "250px", height: "300px" }}
-            className="bg-gradient-to-b from-[#001845] from-30% via-[#3d4352] via-100%  to-[#c2c0c0] to-100% h-96 overall relative xl:scale-90 lg:scale-90"
+            // style={{ width: "250px" }}
+            className="bg-gradient-to-b from-[#001845] from-30% via-[#3d4352] via-100%  to-[#c2c0c0] to-100% h-96  overall relative xl:scale- lg:scale-"
           >
             <Col span={24} className="">
               <div className="flex justify-center img">
                 <Image
-                  src={data.img}
+                  src={img}
                   alt=""
                   className="scale-50  active:images !h-80"
                 />
@@ -47,14 +46,14 @@ export const COverall: FC<{ props: IOverall }> = ({ props }) => {
                 style={{ fontWeight: 450, fontSize: 16 }}
                 className="text-center title"
               >
-                {data.title}
+                {title}
               </div>
 
               <div
                 style={{ color: "#969595", fontSize: 13, fontWeight: 300 }}
                 className="text-left p-7 des -top-[50px] left-[8px] absolute"
               >
-                {data.des}
+                {des}
               </div>
             </Col>
           </div>
@@ -73,7 +72,7 @@ interface IDigital {
     type?: string;
   };
 }
-export const CDigital: FC<{ props: IOverall }> = ({ props }) => {
+export const CDigital: FC<{ props: IDigital }> = ({ props }) => {
   const { data, tOverall } = props;
   return (
     <React.Fragment>
@@ -132,7 +131,7 @@ interface IProject {
     type?: string;
   };
 }
-export const CProject: FC<{ props: IOverall }> = ({ props }) => {
+export const CProject: FC<{ props: IProject }> = ({ props }) => {
   const { data, tOverall } = props;
   return (
     <React.Fragment>
@@ -161,12 +160,14 @@ export const CProject: FC<{ props: IOverall }> = ({ props }) => {
             </Col>
 
             <Col span={24} className="">
-              <div
-                style={{ fontWeight: 450, fontSize: 16 }}
-                className="text-center title"
-              >
-                {data.title}
-              </div>
+              <Col span={24} className="">
+                <div
+                  style={{ fontWeight: 450, fontSize: 16 }}
+                  className="text-center title"
+                >
+                  <span>{data.title}</span>
+                </div>
+              </Col>
 
               <div
                 style={{ color: "#969595", fontSize: 13, fontWeight: 300 }}

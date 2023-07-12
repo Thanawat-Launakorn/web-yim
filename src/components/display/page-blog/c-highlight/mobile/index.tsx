@@ -16,58 +16,72 @@ const CMHighlight: FC<{ props: IMHighlight }> = ({ props }) => {
   return (
     <React.Fragment>
       <Row className="pt-5 pb-24">
-        <Col span={24} className=" ">
-          <Typography.Text
-            style={{
-              color: "#3C97FF",
-            }}
-          >
-            Highlight
-          </Typography.Text>
-        </Col>
+        <Col>
+          <Row>
+            <Col span={24} className=" ">
+              <Typography.Text
+                style={{
+                  color: "#3C97FF",
+                }}
+              >
+                Highlight
+              </Typography.Text>
+            </Col>
+          </Row>
 
-        <Col span={24} className="text-center">
-          <Typography.Text
-            style={{
-              color: "#3C97FF",
-            }}
-          >
-            {activity}
-          </Typography.Text>
-        </Col>
+          <Row>
+            <Col span={24} className="text-center">
+              <Typography.Text
+                style={{
+                  color: "#3C97FF",
+                }}
+              >
+                {activity}
+              </Typography.Text>
+            </Col>
+          </Row>
 
-        <Col span={24} className="text-center">
-          <Typography.Title level={3} style={{ color: "#FFFFFF" }}>
-            {title}
-          </Typography.Title>
-        </Col>
+          <Row>
+            <Col span={24} className="text-center">
+              <Typography.Title level={3} style={{ color: "#FFFFFF" }}>
+                {title}
+              </Typography.Title>
+            </Col>
 
-        <Col span={24} className="justify-center">
-          <ColoredLine color="#3C97FF" className="my-5 mx-auto xl:mx-0 " />
+            <Col span={24} className="justify-center">
+              <ColoredLine color="#3C97FF" className="my-5 mx-auto xl:mx-0 " />
+            </Col>
+            <Col span={24} className="object-cover p-5">
+              <ReactPlayer
+                url={url}
+                width={"100%"}
+                height={"175%"}
+                className=""
+              />
+            </Col>
+          </Row>
+
+          <Row className="translate-y-24 justify-center">
+            <Col span={20} className="text-center">
+              <Typography.Paragraph style={{ color: "#969595" }} className="">
+                {des}
+              </Typography.Paragraph>
+            </Col>
+            <Col span={24} className="text-center">
+              <button
+                style={{
+                  backgroundColor: "#3C97FF",
+                  color: "#070723",
+                  width: 80,
+                  height: 30,
+                }}
+                className="rounded-3xl"
+              >
+                More
+              </button>
+            </Col>
+          </Row>
         </Col>
-        <Col span={24} className="object-cover p-5">
-          <ReactPlayer url={url} width={"100%"} height={"175%"} className="" />
-        </Col>
-        <Row className="translate-y-24 justify-center">
-          <Col span={20} className="text-center">
-            <Typography.Paragraph style={{ color: "#969595" }} className="">
-              {des}
-            </Typography.Paragraph>
-          </Col>
-          <Col span={24} className="text-center">
-            <button
-              style={{
-                backgroundColor: "#3C97FF",
-                color: "#070723",
-                width: 80,
-                height: 30,
-              }}
-              className="rounded-3xl"
-            >
-              More
-            </button>
-          </Col>
-        </Row>
       </Row>
     </React.Fragment>
   );

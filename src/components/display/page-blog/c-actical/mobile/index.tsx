@@ -23,15 +23,15 @@ const CMActical: FC<{ props: ICMActical }> = ({ props }) => {
           <Carousel afterChange={onChange}>
             <Row
               // style={{ width: "600px" }}
-              className=" bg-[#171E2B] rounded-[12px]   p-5 scale-75  "
+              className=" bg-[#171E2B] rounded-[12px]   p-5 scale-75 "
             >
-              <Col>
-                <Row align="middle" gutter={[10, 0]}>
-                  <Col span={24} style={{}} className="">
+              <Col span={24}>
+                <Row align="middle" className="" gutter={[10, 0]}>
+                  <Col span={24} style={{}} className="text-center">
                     <Image
                       alt=""
                       src={img}
-                      className="!rounded-[10]    overflow-hidden scale-100"
+                      className="!rounded-[10] scale-75   "
                     ></Image>
                   </Col>
                   <Col span={24} className="p-3">
@@ -46,7 +46,9 @@ const CMActical: FC<{ props: ICMActical }> = ({ props }) => {
                       </Col>
 
                       <Col className="">
-                        <Typography.Paragraph style={{ color: "#B2AFAF" }}>
+                        <Typography.Paragraph
+                          style={{ fontSize: "14px", color: "#B2AFAF" }}
+                        >
                           {des}
                         </Typography.Paragraph>
                       </Col>

@@ -1,4 +1,4 @@
-import { FieldTimeOutlined } from "@ant-design/icons";
+import { FieldTimeOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import { Row, Col, Typography } from "antd";
 import React, { FC } from "react";
 import ReactPlayer from "react-player";
@@ -14,7 +14,8 @@ const CActivity: FC<{
   props: IActivity;
   styledElec?: string;
   elec?: React.ReactNode;
-}> = ({ props, elec, styledElec }) => {
+  onPressed?: () => void;
+}> = ({ props, elec, styledElec, onPressed }) => {
   const { title, des, updateAt, url } = props;
 
   return (
@@ -27,14 +28,18 @@ const CActivity: FC<{
           >
             <Col span={24} className="">
               <Row className="justify-center p-5">
-                <Col span={21} className="">
+                <Col span={21} className=" text-center">
                   {/* <ReactPlayer
-                    
                     url={url}
                     width="390px"
                     height="250px"
                     className="rounded-[12px] lg:scale-90"
-                  /> */}
+                  > */}
+                  <PlayCircleOutlined
+                    style={{ fontSize: "25px" }}
+                    onClick={onPressed}
+                  />
+                  {/* </ReactPlayer> */}
                   {/* <CYoutube
                   props={{ opts, onReady: onPlayerReady }}
                   videoId={"lTbhd5apcJo"}
@@ -44,7 +49,11 @@ const CActivity: FC<{
             </Col>
             <Row className=" content-center">
               <Col span={13} className="pl-5">
-                <Typography.Title level={5} style={{ color: "#3C97FF" }}>
+                <Typography.Title
+                  level={5}
+                  style={{ color: "#3C97FF" }}
+                  onClick={onPressed}
+                >
                   {title}
                 </Typography.Title>
               </Col>

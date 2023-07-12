@@ -3,15 +3,15 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Row, Col, Divider } from "antd";
 import React, { FC, useState } from "react";
 import Container from "../../../components/container";
-
 import { Link, Button } from "react-scroll";
+
 interface IHeaderButton {
   // tabs: string[];
   // onPressed: (v: string) => void;
 }
 const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
   const [click, setClick] = useState(false);
-  const closeMenu = () => setClick(false);
+  // const closeMenu = () => setClick(false);
 
   return (
     <React.Fragment>
@@ -28,8 +28,8 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
               smooth={true}
               offset={-30}
               duration={1000}
-              onClick={closeMenu}
-              // className="hover:text-[#3c97ff]"
+              onClick={() => setClick}
+              className="hover:text-[#3c97ff]"
             >
               Highlight
             </Link>
@@ -45,7 +45,7 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
               smooth={true}
               offset={-70}
               duration={700}
-              onClick={closeMenu}
+              onClick={() => setClick}
             >
               Activity
             </Link>
@@ -61,7 +61,7 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
               smooth={true}
               offset={-30}
               duration={700}
-              onClick={closeMenu}
+              onClick={() => setClick}
             >
               Yim Share
             </Link>
@@ -78,7 +78,7 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
               smooth={true}
               offset={0}
               duration={1000}
-              onClick={closeMenu}
+              onClick={() => setClick}
             >
               Actical
             </Link>

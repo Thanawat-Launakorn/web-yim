@@ -94,6 +94,14 @@ export const Customer: FC<{ props: ICustomer }> = ({ props }) => {
   return (
     <React.Fragment>
       <Container className="bg-[#081224] pt-20 pb-20">
+        {/* <Col span={24} className="py-10">
+          <span
+            style={{ fontSize: 22 }}
+            className="text-[#3c97ff] hover:text-[#fff]"
+          >
+            Customer
+          </span>
+        </Col> */}
         <div className="sm:block hidden p-5">
           <CCustomer
             props={{

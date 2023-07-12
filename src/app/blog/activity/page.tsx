@@ -1,12 +1,27 @@
 "use client";
-import { Row, Col, Typography, DatePicker, Card } from "antd";
-import React, { FC } from "react";
+import { Row, Col, Typography, DatePicker, Card, Modal, Carousel } from "antd";
+import React, { FC, useState } from "react";
 import Container from "../../../components/container";
 import CElec from "../../../components/svg/elec";
 import CActivity from "@/components/display/page-blog/c-activity";
+import ReactPlayer from "react-player";
+import { styled } from "styled-components";
+import tw from "twin.macro";
+
+const StyledModal = styled.button`
+  ${tw`w-full hidden`}
+`;
 
 interface IActivity {}
 const Activity: FC<{ props: IActivity }> = ({ props }) => {
+  const [open, setOpen] = useState(false);
+  const [videoUrl, setUrl] = useState("");
+
+  const Cancel = () => {
+    setOpen(false);
+    setUrl("");
+  };
+
   const CardMock = [
     {
       title: "Europe Street beat",
@@ -47,26 +62,53 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
               <DatePicker picker="month" />
             </Col>
           </Row>
-          <Row className="justify-center pt-8 " gutter={[30, 30]}>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[0]} />
-            </Col>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[1]} />
-            </Col>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[2]} />
-            </Col>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[0]} />
-            </Col>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[1]} />
-            </Col>
-            <Col xl={{ span: 8 }} lg={{ span: 8 }} md={{ span: 12 }} span={24}>
-              <CActivity props={CardMock[2]} />
-            </Col>
-          </Row>
+
+          <div className="md:block hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {CardMock.map((e, idx) => (
+                <CActivity
+                  key={idx}
+                  props={e}
+                  onPressed={() => {
+                    setUrl(e.url);
+                    setOpen(true);
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="md:hidden block p-4">
+            <Carousel>
+              {CardMock.map((e, idx) => (
+                <CActivity
+                  key={idx}
+                  props={e}
+                  onPressed={() => {
+                    setUrl(e.url);
+                    setOpen(true);
+                  }}
+                />
+              ))}
+            </Carousel>
+          </div>
+
+          <Modal
+            open={open}
+            onCancel={Cancel}
+            footer={null}
+            closable={false}
+            keyboard
+            width="1000px"
+            bodyStyle={{}}
+          >
+            <ReactPlayer
+              url={videoUrl}
+              width={"100%"}
+              height={500}
+              className="rounded-[12px]  "
+            />
+          </Modal>
         </Col>
       </Row>
     </Container>

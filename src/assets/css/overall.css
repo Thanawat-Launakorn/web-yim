@@ -5,7 +5,7 @@
 }
 
 .overall:hover .title {
-  transform: translate3d(60px, -120px, 50px);
+  transform: translate3d(40px, -120px, 50px);
   color: #3c97ff;
 }
 

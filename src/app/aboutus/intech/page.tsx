@@ -59,7 +59,13 @@ export const InTech: FC<{ props: IInTech }> = ({ props }) => {
               </span>
             </div>
           </Col>
-          <Row className="p-10" gutter={[15, 15]}>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 px-3">
+            {CardMock.map((e, idx) => (
+              <CInTech key={idx} props={e} />
+            ))}
+          </div>
+          {/* <Row className="p-10" gutter={[15, 15]}>
             <Col xl={{ span: 8 }} sm={{ span: 12 }} span={24}>
               <CInTech props={CardMock[0]} />
             </Col>
@@ -78,7 +84,7 @@ export const InTech: FC<{ props: IInTech }> = ({ props }) => {
             <Col xl={{ span: 8 }} sm={{ span: 12 }} span={24}>
               <CInTech props={CardMock[5]} />
             </Col>
-          </Row>
+          </Row> */}
         </div>
       </Container>
     </React.Fragment>
