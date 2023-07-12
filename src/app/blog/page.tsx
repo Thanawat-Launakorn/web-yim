@@ -22,15 +22,11 @@ export default function page({}: Props) {
         <TabsBar props={{}} />
       </div>
       <div id="highlight">{/* <Highlight props={{}} /> */}</div>
-      <div id="activity">
-        <Activity props={{}} />
-      </div>
+      <div id="activity">{/* <Activity props={{}} /> */}</div>
       <div id="yim-share">
         <YimShare props={{}} />
       </div>
-      <div id="actical">
-        <Actical props={{}} />
-      </div>
+      <div id="actical">{/* <Actical props={{}} /> */}</div>
     </div>
   );
 }

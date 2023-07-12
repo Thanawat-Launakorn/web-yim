@@ -4,6 +4,7 @@ import {
   PlayCircleOutlined,
 } from "@ant-design/icons";
 import { Row, Col, ModalProps, Modal, Typography, Divider } from "antd";
+import { data } from "autoprefixer";
 import { StaticImageData } from "next/image";
 import React, { FC, useState } from "react";
 import ReactPlayer from "react-player";
@@ -13,21 +14,14 @@ interface IYimShare {
   title: string;
   topic: string;
   url?: string;
-  value?: boolean;
   img?: StaticImageData;
   updateAt: string;
 }
-const CYimShare: FC<{ props: IYimShare }> = ({ props }) => {
-  const { title, topic, url, value, img, updateAt } = props;
-  const [open, setOpen] = useState(false);
-
-  const showModal = () => {
-    setOpen(true);
-  };
-
-  const Cancel = () => {
-    setOpen(false);
-  };
+const CYimShare: FC<{ props: IYimShare; onPressed?: () => void }> = ({
+  props,
+  onPressed,
+}) => {
+  const { title, topic, url, img, updateAt } = props;
 
   return (
     <React.Fragment>
@@ -36,7 +30,7 @@ const CYimShare: FC<{ props: IYimShare }> = ({ props }) => {
           className=" justify-center object-contain "
           style={{ width: "px", height: "430px" }}
         >
-          <Row style={{ height: "470px" }} className="" onClick={showModal}>
+          <Row style={{ height: "470px" }} className="">
             <Col>
               {/* <ReactPlayer
                 url={url}
@@ -52,7 +46,7 @@ const CYimShare: FC<{ props: IYimShare }> = ({ props }) => {
             <Col span={24} className="-translate-y-44 text-center">
               <PlayCircleOutlined
                 style={{ fontSize: "25px" }}
-                // onClick={showModal}
+                onClick={onPressed}
               />
             </Col>
             <Col span={24} className="absolute -translate-y-10 px-2">
@@ -85,10 +79,6 @@ const CYimShare: FC<{ props: IYimShare }> = ({ props }) => {
               />
             </Col>
           </Row>
-          <Modal open={open} onCancel={Cancel}>
-            <p>phum</p>
-            <p>phum</p>
-          </Modal>
         </Col>
       </Row>
     </React.Fragment>
