@@ -9,7 +9,7 @@ import { styled } from "styled-components";
 import tw from "twin.macro";
 
 const StyledModal = styled.button`
-  ${tw`w-full hidden`}
+  ${tw``}
 `;
 
 interface IActivity {}
@@ -21,6 +21,12 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
     setOpen(false);
     setUrl("");
   };
+
+  const StyledModal1 = styled(Modal)`
+    .ant-modal-content {
+      padding: 0;
+    }
+  `;
 
   const CardMock = [
     {
@@ -93,7 +99,7 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
             </Carousel>
           </div>
 
-          <Modal
+          <StyledModal1
             open={open}
             onCancel={Cancel}
             footer={null}
@@ -108,7 +114,7 @@ const Activity: FC<{ props: IActivity }> = ({ props }) => {
               height={500}
               className="rounded-[12px]  "
             />
-          </Modal>
+          </StyledModal1>
         </Col>
       </Row>
     </Container>

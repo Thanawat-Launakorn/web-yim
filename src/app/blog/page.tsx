@@ -4,7 +4,7 @@ import Image from "next/image";
 import Highlight from "./highlight/page";
 import Activity from "./activity/page";
 import Actical from "./actical/page";
-import TabsBar from "./tabs/page";
+import TabsBar, { Arrow } from "./tabs/page";
 import YimShare from "./yimshare/page";
 type Props = {};
 
@@ -18,18 +18,23 @@ export default function page({}: Props) {
           className="opacity-50 hover:opacity-100 object-cover"
         />
       </div>
+
       <div>
         <TabsBar props={{}} />
       </div>
+
       {/* <div id="highlight">
         <Highlight props={{}} />
       </div> */}
+
       <div id="activity">
         <Activity props={{}} />
       </div>
+
       <div id="yim-share">
         <YimShare props={{}} />
       </div>
+
       <div id="actical">
         <Actical props={{}} />
       </div>

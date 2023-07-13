@@ -1,6 +1,6 @@
 "use client";
-import { SearchOutlined } from "@ant-design/icons";
-import { Row, Col, Divider } from "antd";
+import { SearchOutlined, DownOutlined } from "@ant-design/icons";
+import { Row, Col, Divider, Dropdown, Typography } from "antd";
 import React, { FC, useState } from "react";
 import Container from "../../../components/container";
 import { Link, Button } from "react-scroll";
@@ -15,7 +15,7 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
 
   return (
     <React.Fragment>
-      <Container className="bg-[#081224] pt-10">
+      <Container className="bg-[#081224] pt-10 px-5">
         <Row justify="start" className=" gap-x-10 ">
           <Col>
             <Link
@@ -94,4 +94,13 @@ const TabsBar: FC<{ props: IHeaderButton }> = ({ props }) => {
   );
 };
 
+export const Arrow: React.FC = () => {
+  return (
+    <Dropdown menu={{}}>
+      <Typography.Link>
+        <DownOutlined />
+      </Typography.Link>
+    </Dropdown>
+  );
+};
 export default TabsBar;
